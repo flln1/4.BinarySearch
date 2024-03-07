@@ -1,0 +1,17 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+    int n=6;
+    int low=1, high=n;
+    int ans=0;
+    while(low<=high) {
+        int mid=(low+high)/2;
+        ans=mid*mid;
+        if(ans<=n) { //eliminate left half
+            low=mid+1;
+        }
+        else high=mid-1;
+    }
+    cout << high;
+    return 0;
+}
